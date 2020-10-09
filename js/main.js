@@ -102,7 +102,7 @@ function updatePropSymbols(timestamp) {
 
 function calcPropRadius(attributeValue) {
     
-    var scaleFactor = 0.002;
+    var scaleFactor = 0.025;
     var area = attributeValue * scaleFactor;
     
     return Math.sqrt(area/Math.PI);
