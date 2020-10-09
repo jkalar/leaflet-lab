@@ -1,4 +1,11 @@
 /* Stylesheet by Jeff Kalar for Lab1 GEOG 575 */
 
+#mapid { height: 600px; }
+#mapid { width:  1400px; }
+#mapid { margin: auto; }
+
+body { background-color: bisque};
+
+
 
 
