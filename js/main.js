@@ -18,3 +18,36 @@ $.getJSON("data/citiesND.geojson")
 
 });
 
+function processData(data) {
+    var timestamps = [];
+    var min = Infinity;
+    var max = -Infinity;
+    
+    for (var feature in data.features) {
+        var properties = data.features[feature].properties;
+        for (var attribute in properties) {
+            if ( attribute != 'id' &&
+                 attribute != 'name' &&
+                 attribute != 'latitude' &&
+                 attribute != 'longitude' )
+            
+            {
+                 if ( $.inArray(attribute,timestamps) === -1) {
+                     timestamps.push(attribute);
+                 }
+                 if (properties[attribute] < min) {
+                     min = properties[attribute];
+                 }
+                 if (properties[attribute] > max) {
+                     max = properties[attribute];
+                 }
+            }
+        }
+    }
+    return {
+        timestamps : timestamps,
+        min : min,
+        max : max
+    }
+}
+
