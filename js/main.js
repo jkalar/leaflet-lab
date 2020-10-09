@@ -1,5 +1,6 @@
 /* Javascript by Jeff Kalar */
 
+
 var mapND = L.map('mapid').setView([47.589199, -100.337102], 7);
 
 // Load basemap layer
@@ -13,6 +14,6 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r
 // Load geojson data
 
 $.getJSON("data/citiesND.geojson").done(function(data) {
-    console.log(data);
+
 })
 
