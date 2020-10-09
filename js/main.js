@@ -99,3 +99,10 @@ function updatePropSymbols(timestamp) {
 
 // Calculate radius of symbols based on their area
 
+function calcPropRadius(attributeValue) {
+    
+    var scaleFactor = 0.002;
+    var area = attributeValue * scaleFactor;
+    
+    return Math.sqrt(area/Math.PI);
+}
