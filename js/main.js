@@ -1,4 +1,4 @@
-/* Javascript by Jeff Kalar */
+/* Javascript for Proportional Symbol Map by Jeff Kalar, October 2020 */
 
 
 var mapND = L.map('mapid').setView([47.589199, -100.337102], 7);
