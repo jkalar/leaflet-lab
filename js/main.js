@@ -13,7 +13,8 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r
 
 // Load geojson data
 
-$.getJSON("data/citiesND.geojson").done(function(data) {
+$.getJSON("data/citiesND.geojson")
+.done(function(data) {
 
 })
 
