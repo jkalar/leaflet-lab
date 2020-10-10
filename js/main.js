@@ -139,11 +139,11 @@ function createLegend(min, max) {
         L.DomEvent.stopPropagation(e); 
     });  
 
-    $(legendContainer).append('<h2 id="legendTitle"># of somethings</h2>');
+    $(legendContainer).append('<h2 id="legendTitle">Population</h2>');
 
     for (var i = 0; i <= classes.length-1; i++) {  
 
-        legendCircle = L.DomUtil.create("div", "legendCircle");  
+        legendCircle = L.DomUtil.create('div', 'legendCircle');  
 
         currentRadius = calcPropRadius(classes[i]);
 
