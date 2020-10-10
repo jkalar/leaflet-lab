@@ -145,7 +145,7 @@ createTimeLabel("2010");
 
 function createTimeLabel(startTimestamp) {
     var temporalLegend = L.control({position: 'bottomleft' });
-    temporalLegend.onAdd = function(map) {
+    temporalLegend.onAdd = function(mapND) {
         var output = L.DomUtil.create("output", "temporal-legend");
         $(output).text(startTimestamp);
         return output;
