@@ -115,14 +115,14 @@ function createSliderUI(timestamps) {
     var sliderControl = L.control({ position: 'bottomleft'} );
     
     sliderControl.onAdd = function(map) {
-        var slider = L.DomUtil.create("input", "range-slider");
+        var slider = L.DomUtil.create('input', 'range-slider');
         L.DomEvent.addListener(slider, 'mousedown', function(e) {
             L.DomEvent.stopPropagation(e);
             map.dragging.disable(e);
             map.dragging.enable(e)
         });
         
-        var labels = ["2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019"];
+        var labels = ['2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019'];
         
         $(Slider)
             .attr({
