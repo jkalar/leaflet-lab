@@ -1,10 +1,10 @@
 /* Stylesheet by Jeff Kalar for Lab1 GEOG 575 */
 
-#mapid { height: 600px; }
-#mapid { width:  900px; }
+#mapid { height:  500px; }
+#mapid { width:  1500px; }
 #mapid { margin: auto; }
 
-body {background-color: black;}
+body {background-color: beige;}
 
 
 
