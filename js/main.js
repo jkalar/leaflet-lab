@@ -113,7 +113,7 @@ function calcPropRadius(attributeValue) {
 // Create time slider 
 
 function createSliderUI(timestamps) {
-    var sliderControl = L.control({ position: 'topleft', orient: 'vertical'} );
+    var sliderControl = L.control({ position: 'topleft', orientation: 'vertical'} );
     
       sliderControl.onAdd = function(map) {
         var slider = L.DomUtil.create('input', 'range-slider');
@@ -148,7 +148,7 @@ function createSliderUI(timestamps) {
 // Create time slider labels
 
 function createTimeLabel(startTimestamp) {
-    var temporalLegend = L.control({position: 'topleft', orient: 'vertical' });
+    var temporalLegend = L.control({position: 'topleft', orientation: 'vertical' });
     temporalLegend.onAdd = function(mapND) {
         var output = L.DomUtil.create("output", "temporal-legend");
         $(output).text(startTimestamp);
