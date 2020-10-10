@@ -137,7 +137,7 @@ function createSliderUI(timestamps) {
         });
     return slider;
     }
-sliderControl.addTo(map);
+sliderControl.addTo(mapND);
 createTimeLabel("2010");
 }
 
@@ -150,5 +150,5 @@ function createTimeLabel(startTimestamp) {
         $(output).text(startTimestamp);
         return output;
     }
-    temporalLegend.addTo(map);
+    temporalLegend.addTo(mapND);
 }
