@@ -3,10 +3,10 @@
 #mapid { height: 600px; }
 #mapid { margin: auto; }
 
-body { background-color: black; }
+body { background-color: antiquewhite; }
 
-/* .range-slider { 
+.range-slider { 
     width: 500%;
     text-align: center;
     image-orientation: vertical;
-} */
+} 
