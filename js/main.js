@@ -156,3 +156,6 @@ function createTimeLabel(startTimestamp) {
     }
     temporalLegend.addTo(mapND);
 }
+
+// Create Legend
+
