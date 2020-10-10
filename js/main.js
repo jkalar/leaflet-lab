@@ -17,6 +17,7 @@ $.getJSON("data/citiesND.geojson")
 .done(function(data) {
     var info = processData(data);
     createPropSymbols(info.timestamps, data);
+    console.log();
     createSliderUI(info.timestamps);
 });
 
@@ -114,9 +115,10 @@ function calcPropRadius(attributeValue) {
 function createSliderUI(timestamps) {
     var sliderControl = L.control({ position: 'bottomleft'} );
     
-    sliderControl.onAdd = function(map) {
+      sliderControl.onAdd = function(map) {
         var slider = L.DomUtil.create('input', 'range-slider');
         L.DomEvent.addListener(slider, 'mousedown', function(e) {
+            
             L.DomEvent.stopPropagation(e);
             map.dragging.disable(e);
             map.dragging.enable(e)
@@ -124,7 +126,7 @@ function createSliderUI(timestamps) {
         
         var labels = ['2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019'];
         
-        $(Slider)
+        $(slider)
             .attr({
                 'type' : 'range',
                 'max' : timestamps[timestamps.length-1],
@@ -139,8 +141,8 @@ function createSliderUI(timestamps) {
         });
     return slider;
     }
-sliderControl.addTo(mapND);
-createTimeLabel("2010");
+    sliderControl.addTo(mapND);
+    createTimeLabel('2010');
 }
 
 // Create time slider labels
