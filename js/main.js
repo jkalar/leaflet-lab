@@ -17,6 +17,7 @@ $.getJSON("data/citiesND.geojson")
 .done(function(data) {
     var info = processData(data);
     createPropSymbols(info.timestamps, data);
+    createSliderUI(info.timestamps);
 });
 
 // Function to process data which acquires the year columns and min/max population values
@@ -106,4 +107,48 @@ function calcPropRadius(attributeValue) {
     var area = attributeValue * scaleFactor;
     
     return Math.sqrt(area/Math.PI);
+}
+
+// Create time slider 
+
+function createSliderUI(timestamps) {
+    var sliderControl = L.control({ position: 'bottomleft'} );
+    
+    sliderControl.onAdd = function(map) {
+        var slider = L.DomUtil.create("input", "range-slider");
+        L.DomEvent.addListener(slider, 'mousedown', function(e) {
+            L.DomEvent.stopPropagation(e);
+        });
+        
+        var labels = ["2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019"];
+        
+        $(Slider)
+            .attr({
+                'type' : 'range',
+                'max' : timestamps[timestamps.length-1],
+                'min' : timestamps[0],
+                'step' : 1,
+                'value' : String(timestamps[0])
+            })
+            .on('input change', function() {
+                updatePropSymbols($(this).val().toString());
+                var i = $.inArray(this.value.timestamps);
+                $(".temporal-legend").text(labels[i]);
+        });
+    return slider;
+    }
+sliderControl.addTo(map);
+createTimeLabel("2010");
+}
+
+// Create time slider labels
+
+function createTimeLabel(startTimestamp) {
+    var temporalLegend = L.control({position: 'bottomleft' });
+    temporalLegend.onAdd = function(map) {
+        var output = L.DomUtil.create("output", "temporal-legend");
+        $(output).text(startTimestamp);
+        return output;
+    }
+    temporalLegend.addTo(map);
 }
