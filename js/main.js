@@ -17,8 +17,8 @@ $.getJSON("data/citiesND.geojson")
 .done(function(data) {
     var info = processData(data);
     createPropSymbols(info.timestamps, data);
-    console.log();
     createSliderUI(info.timestamps);
+    createLegend(info.min, info.max);
 });
 
 // Function to process data which acquires the year columns and min/max population values
@@ -110,6 +110,66 @@ function calcPropRadius(attributeValue) {
     return Math.sqrt(area/Math.PI);
 }
 
+// Create Legend
+
+function createLegend(min, max) {
+
+    if (min < 10) {	
+        min = 10; 
+    }
+
+    function roundNumber(inNumber) {
+
+            return (Math.round(inNumber/10) * 10);  
+    }
+
+    var legend = L.control( { position: 'bottomright' } );
+
+    legend.onAdd = function(map) {
+
+    var legendContainer = L.DomUtil.create('div', 'legend');  
+    var symbolsContainer = L.DomUtil.create('div', 'symbolsContainer');
+    var classes = [roundNumber(min), roundNumber((max-min)/2), roundNumber(max)]; 
+    var legendCircle;  
+    var lastRadius = 0;
+    var currentRadius;
+    var margin;
+
+    L.DomEvent.addListener(legendContainer, 'mousedown', function(e) { 
+        L.DomEvent.stopPropagation(e); 
+    });  
+
+    $(legendContainer).append('<h2 id="legendTitle"># of somethings</h2>');
+
+    for (var i = 0; i <= classes.length-1; i++) {  
+
+        legendCircle = L.DomUtil.create("div", "legendCircle");  
+
+        currentRadius = calcPropRadius(classes[i]);
+
+        margin = -currentRadius - lastRadius - 2;
+
+        $(legendCircle).attr("style", "width: " + currentRadius*2 + 
+            "px; height: " + currentRadius*2 + 
+            "px; margin-left: " + margin + "px" );				
+        $(legendCircle).append("<span class='legendValue'>"+classes[i]+"</span>");
+
+        $(symbolsContainer).append(legendCircle);
+
+        lastRadius = currentRadius;
+
+    }
+
+    $(legendContainer).append(symbolsContainer); 
+
+    return legendContainer; 
+
+    };
+
+    legend.addTo(mapND);  
+
+} // end createLegend();
+
 // Create time slider 
 
 function createSliderUI(timestamps) {
@@ -157,5 +217,4 @@ function createTimeLabel(startTimestamp) {
     temporalLegend.addTo(mapND);
 }
 
-// Create Legend
 
