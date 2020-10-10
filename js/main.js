@@ -104,7 +104,7 @@ function updatePropSymbols(timestamp) {
 
 function calcPropRadius(attributeValue) {
     
-    var scaleFactor = 0.025;
+    var scaleFactor = 0.1;
     var area = attributeValue * scaleFactor;
     
     return Math.sqrt(area/Math.PI);
@@ -113,7 +113,7 @@ function calcPropRadius(attributeValue) {
 // Create time slider 
 
 function createSliderUI(timestamps) {
-    var sliderControl = L.control({ position: 'bottomleft'} );
+    var sliderControl = L.control({ position: 'topleft', orientation: 'vertical'} );
     
       sliderControl.onAdd = function(map) {
         var slider = L.DomUtil.create('input', 'range-slider');
@@ -136,8 +136,8 @@ function createSliderUI(timestamps) {
             })
             .on('input change', function() {
                 updatePropSymbols($(this).val().toString());
-                var i = $.inArray(this.value.timestamps);
-                $(".temporal-legend").text(labels[i]);
+                var i = $.inArray(this.value,timestamps);
+                $('.temporal-legend').text(labels[i]);
         });
     return slider;
     }
@@ -148,7 +148,7 @@ function createSliderUI(timestamps) {
 // Create time slider labels
 
 function createTimeLabel(startTimestamp) {
-    var temporalLegend = L.control({position: 'bottomleft' });
+    var temporalLegend = L.control({position: 'topleft', orientation: 'vertical' });
     temporalLegend.onAdd = function(mapND) {
         var output = L.DomUtil.create("output", "temporal-legend");
         $(output).text(startTimestamp);
