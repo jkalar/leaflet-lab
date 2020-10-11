@@ -10,7 +10,8 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r
 	subdomains: 'abcd',
     minZoom: 4,
 	maxZoom: 18,
-    maxBounds: [[ 47.591362, -122.332475], [25.777645, -80.219521]]
+   // maxBounds: [[47.591362, -122.332475], [25.777645, -80.219521]],
+   // maxBoundsViscosity: 1.0
 }).addTo(mlbPayroll);
 
 // Load geojson data
