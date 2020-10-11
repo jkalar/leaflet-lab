@@ -1,7 +1,7 @@
 /* Javascript for Proportional Symbol Map by Jeff Kalar, October 2020 */
 
 
-var mlbPayroll = L.map('mapid').setView([37.847629, -97.633491], 5);
+var mlbPayroll = L.map('mapid').setView([37.255555, -97.633491], 5);
 
 // Load basemap layer
 
@@ -123,7 +123,7 @@ function createLegend(min, max) {
             return (Math.round(inNumber/10) * 10);  
     }
 
-    var legend = L.control( { position: 'bottomright' } );
+    var legend = L.control( { position: 'bottomleft' } );
 
     legend.onAdd = function(map) {
 
@@ -139,7 +139,7 @@ function createLegend(min, max) {
         L.DomEvent.stopPropagation(e); 
     });  
 
-    $(legendContainer).append('<h2 id="legendTitle">Estimated Payroll in $</h2>');
+    $(legendContainer).append('<h2 id="legendTitle">MLB Team Payrolls in USD ($)</h2>');
 
     for (var i = 0; i <= classes.length-1; i++) {  
 
@@ -173,7 +173,7 @@ function createLegend(min, max) {
 // Create time slider 
 
 function createSliderUI(timestamps) {
-    var sliderControl = L.control({ position: 'bottomleft'} );
+    var sliderControl = L.control({ position: 'bottomright'} );
     
       sliderControl.onAdd = function(map) {
         var slider = L.DomUtil.create('input', 'range-slider');
@@ -208,7 +208,7 @@ function createSliderUI(timestamps) {
 // Create time slider labels
 
 function createTimeLabel(startTimestamp) {
-    var temporalLegend = L.control({position: 'bottomleft'});
+    var temporalLegend = L.control({position: 'bottomright'});
     temporalLegend.onAdd = function(mlbPayroll) {
         var output = L.DomUtil.create("output", "temporal-legend");
         $(output).text(startTimestamp);
