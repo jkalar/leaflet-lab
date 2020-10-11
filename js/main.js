@@ -14,6 +14,15 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r
    // maxBoundsViscosity: 1.0
 }).addTo(mlbPayroll);
 
+var southWest = L.latLng(20.777645, -55.219521),
+    northEast = L.latLng(53.591362, -152.332475);
+var bounds = L.latLngBounds(southWest, northEast);
+
+mlbPayroll.setMaxBounds(bounds);
+mlbPayroll.on('drag', function(){
+    mlbPayroll.panInsideBounds(bounds, { animate: false });
+});
+
 // Load geojson data
 
 $.getJSON("data/mlbPayroll.geojson")
