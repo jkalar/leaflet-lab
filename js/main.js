@@ -8,7 +8,7 @@ var mlbPayroll = L.map('mapid').setView([37.555555, -97.633491], 5);
 L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
 	subdomains: 'abcd',
-    minZoom: 5,
+    minZoom: 4,
 	maxZoom: 18,
     maxBounds: [[ 47.591362, -122.332475], [25.777645, -80.219521]]
 }).addTo(mlbPayroll);
