@@ -1,14 +1,14 @@
 /* Javascript for Proportional Symbol Map by Jeff Kalar, October 2020 */
 
 
-var mlbPayroll = L.map('mapid').setView([37.555555, -97.633491], 5);
+var mlbPayroll = L.map('mapid').setView([37.555555, -100.633491], 5);
 
 // Load basemap layer
 
 L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
 	subdomains: 'abcd',
-    minZoom: 5,
+    minZoom: 4,
 	maxZoom: 18,
 }).addTo(mlbPayroll);
 
@@ -114,7 +114,7 @@ function updatePropSymbols(timestamp) {
 
 function calcPropRadius(attributeValue) {
     
-    var scaleFactor = 0.00002;
+    var scaleFactor = 0.000015;
     var area = attributeValue * scaleFactor;
     
     return Math.sqrt(area/Math.PI);
@@ -183,7 +183,7 @@ function createLegend(min, max) {
 // Create time slider 
 
 function createSliderUI(timestamps) {
-    var sliderControl = L.control({ position: 'bottomright'} );
+    var sliderControl = L.control({ position: 'bottomleft'} );
     
       sliderControl.onAdd = function(map) {
         var slider = L.DomUtil.create('input', 'range-slider');
@@ -218,7 +218,7 @@ function createSliderUI(timestamps) {
 // Create time slider labels
 
 function createTimeLabel(startTimestamp) {
-    var temporalLegend = L.control({position: 'bottomright'});
+    var temporalLegend = L.control({position: 'bottomleft'});
     temporalLegend.onAdd = function(mlbPayroll) {
         var output = L.DomUtil.create("output", "temporal-legend");
         $(output).text(startTimestamp);
