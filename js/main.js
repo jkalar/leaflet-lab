@@ -1,14 +1,15 @@
 /* Javascript for Proportional Symbol Map by Jeff Kalar, October 2020 */
 
 
-var mlbPayroll = L.map('mapid').setView([37.255555, -97.633491], 5);
+var mlbPayroll = L.map('mapid').setView([37.555555, -97.633491], 5);
 
 // Load basemap layer
 
 L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
 	subdomains: 'abcd',
-	maxZoom: 19
+    minZoom: 5,
+	maxZoom: 17
 }).addTo(mlbPayroll);
 
 // Load geojson data
@@ -60,14 +61,14 @@ function processData(data) {
 
 function createPropSymbols(timestamps, data) {
     
-    mlbTeams = L.geoJson(data, {
+    mlbStadiums = L.geoJson(data, {
         
         pointToLayer: function(feature, LatLng) {
             return L.circleMarker(LatLng, {
                 fillColor: "#501e65",
                 color: '#501e65',
                 weight: 3,
-                fillOpacity: 0.7
+                fillOpacity: 0.4
             }).on({
                 mouseover: function(e) {
                     this.openPopup();
@@ -88,7 +89,7 @@ function createPropSymbols(timestamps, data) {
 
 function updatePropSymbols(timestamp) {
     
-    mlbTeams.eachLayer(function(layer) {
+    mlbStadiums.eachLayer(function(layer) {
         
         var props = layer.feature.properties;
         var radius = calcPropRadius(props[timestamp]);
@@ -104,7 +105,7 @@ function updatePropSymbols(timestamp) {
 
 function calcPropRadius(attributeValue) {
     
-    var scaleFactor = 0.00001;
+    var scaleFactor = 0.00002;
     var area = attributeValue * scaleFactor;
     
     return Math.sqrt(area/Math.PI);
