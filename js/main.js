@@ -5,15 +5,15 @@ var mlbPayroll = L.map('mapid').setView([37.555555, -100.633491], 5);
 
 // Load basemap layer
 
-L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+/* L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
 	subdomains: 'abcd',
     minZoom: 4,
 	maxZoom: 18,
-}).addTo(mlbPayroll);
+}).addTo(mlbPayroll); */
 
-var southWest = L.latLng(18.777645, -45.219521),
-    northEast = L.latLng(56.591362, -162.332475);
+var southWest = L.latLng(10.777645, -55.219521),
+    northEast = L.latLng(56.591362, -145.332475);
 var bounds = L.latLngBounds(southWest, northEast);
 
 mlbPayroll.setMaxBounds(bounds);
@@ -74,18 +74,18 @@ function createPropSymbols(timestamps, data) {
         
         pointToLayer: function(feature, LatLng) {
             return L.circleMarker(LatLng, {
-                fillColor: "#501e65",
-                color: '#501e65',
-                weight: 3,
-                fillOpacity: 0.4
+                fillColor: "red",
+                color: 'red',
+                weight: 1,
+                fillOpacity: 0.5
             }).on({
                 mouseover: function(e) {
                     this.openPopup();
-                    this.setStyle({fillColor: 'green'});
+                    this.setStyle({fillColor: 'white'});
                 },
                 mouseout: function(e) {
                     this.closePopup();
-                    this.setStyle({fillColor: '#501e65'});
+                    this.setStyle({fillColor: ''});
                 }
             });
         }
@@ -114,7 +114,7 @@ function updatePropSymbols(timestamp) {
 
 function calcPropRadius(attributeValue) {
     
-    var scaleFactor = 0.000015;
+    var scaleFactor = 0.000009;
     var area = attributeValue * scaleFactor;
     
     return Math.sqrt(area/Math.PI);
