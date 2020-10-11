@@ -112,7 +112,7 @@ function calcPropRadius(attributeValue) {
 
 // Create Legend
 
-/*function createLegend(min, max) {
+function createLegend(min, max) {
 
     if (min < 10) {	
         min = 10; 
@@ -139,7 +139,7 @@ function calcPropRadius(attributeValue) {
         L.DomEvent.stopPropagation(e); 
     });  
 
-    $(legendContainer).append('<h2 id="legendTitle">Attendance</h2>');
+    $(legendContainer).append('<h2 id="legendTitle">Estimated Payroll</h2>');
 
     for (var i = 0; i <= classes.length-1; i++) {  
 
@@ -168,7 +168,7 @@ function calcPropRadius(attributeValue) {
 
     legend.addTo(mlbPayroll);  
 
-} // end createLegend(); */
+} // end createLegend(); 
 
 // Create time slider 
 
