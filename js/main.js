@@ -5,12 +5,12 @@ var mlbPayroll = L.map('mapid').setView([37.555555, -100.633491], 5);
 
 // Load basemap layer
 
-/* L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
 	subdomains: 'abcd',
     minZoom: 4,
 	maxZoom: 18,
-}).addTo(mlbPayroll); */
+}).addTo(mlbPayroll); 
 
 var southWest = L.latLng(10.777645, -55.219521),
     northEast = L.latLng(56.591362, -145.332475);
