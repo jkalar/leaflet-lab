@@ -1,7 +1,7 @@
 /* Javascript for Proportional Symbol Map by Jeff Kalar, October 2020 */
 
 
-var mapND = L.map('mapid').setView([47.589199, -100.337102], 7);
+var mapND = L.map('mapid').setView([38.847629, -97.633491], 5);
 
 // Load basemap layer
 
@@ -13,7 +13,7 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r
 
 // Load geojson data
 
-$.getJSON("data/citiesND.geojson")
+$.getJSON("data/mlbPayroll.geojson")
 .done(function(data) {
     var info = processData(data);
     createPropSymbols(info.timestamps, data);
@@ -93,7 +93,7 @@ function updatePropSymbols(timestamp) {
         var props = layer.feature.properties;
         var radius = calcPropRadius(props[timestamp]);
         
-        var popupContent = props.name + ' ' + timestamp + ' population: ' + String(props[timestamp]) ;
+        var popupContent = props.name + ' ' + timestamp + ' Estimated Payroll= $' + String(props[timestamp]) ;
         
         layer.setRadius(radius);
         layer.bindPopup(popupContent, { offset: new L.Point(0,-radius) });
@@ -104,7 +104,7 @@ function updatePropSymbols(timestamp) {
 
 function calcPropRadius(attributeValue) {
     
-    var scaleFactor = 0.1;
+    var scaleFactor = 0.00001;
     var area = attributeValue * scaleFactor;
     
     return Math.sqrt(area/Math.PI);
@@ -112,7 +112,7 @@ function calcPropRadius(attributeValue) {
 
 // Create Legend
 
-function createLegend(min, max) {
+/*function createLegend(min, max) {
 
     if (min < 10) {	
         min = 10; 
@@ -139,7 +139,7 @@ function createLegend(min, max) {
         L.DomEvent.stopPropagation(e); 
     });  
 
-    $(legendContainer).append('<h2 id="legendTitle">Population</h2>');
+    $(legendContainer).append('<h2 id="legendTitle">Attendance</h2>');
 
     for (var i = 0; i <= classes.length-1; i++) {  
 
@@ -168,7 +168,7 @@ function createLegend(min, max) {
 
     legend.addTo(mapND);  
 
-} // end createLegend();
+} // end createLegend(); */
 
 // Create time slider 
 
