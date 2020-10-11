@@ -8,14 +8,12 @@ var mlbPayroll = L.map('mapid').setView([37.555555, -97.633491], 5);
 L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
 	subdomains: 'abcd',
-    minZoom: 4,
+    minZoom: 5,
 	maxZoom: 18,
-   // maxBounds: [[47.591362, -122.332475], [25.777645, -80.219521]],
-   // maxBoundsViscosity: 1.0
 }).addTo(mlbPayroll);
 
-var southWest = L.latLng(20.777645, -55.219521),
-    northEast = L.latLng(53.591362, -152.332475);
+var southWest = L.latLng(18.777645, -45.219521),
+    northEast = L.latLng(56.591362, -162.332475);
 var bounds = L.latLngBounds(southWest, northEast);
 
 mlbPayroll.setMaxBounds(bounds);
@@ -151,7 +149,7 @@ function createLegend(min, max) {
         L.DomEvent.stopPropagation(e); 
     });  
 
-    $(legendContainer).append('<h2 id="legendTitle">MLB Team Payrolls in USD ($)</h2>');
+    $(legendContainer).append('<h2 id="legendTitle">Payrolls in USD ($)</h2>');
 
     for (var i = 0; i <= classes.length-1; i++) {  
 
