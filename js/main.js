@@ -1,7 +1,7 @@
 /* Javascript for Proportional Symbol Map by Jeff Kalar, October 2020 */
 
 
-var mapND = L.map('mapid').setView([38.847629, -97.633491], 5);
+var mlbPayroll = L.map('mapid').setView([38.847629, -97.633491], 5);
 
 // Load basemap layer
 
@@ -9,7 +9,7 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
 	subdomains: 'abcd',
 	maxZoom: 19
-}).addTo(mapND);
+}).addTo(mlbPayroll);
 
 // Load geojson data
 
@@ -60,7 +60,7 @@ function processData(data) {
 
 function createPropSymbols(timestamps, data) {
     
-    cities = L.geoJson(data, {
+    mlbTeams = L.geoJson(data, {
         
         pointToLayer: function(feature, LatLng) {
             return L.circleMarker(LatLng, {
@@ -79,7 +79,7 @@ function createPropSymbols(timestamps, data) {
                 }
             });
         }
-    }).addTo(mapND);
+    }).addTo(mlbPayroll);
     
     updatePropSymbols(timestamps[0]);
 }
@@ -88,7 +88,7 @@ function createPropSymbols(timestamps, data) {
 
 function updatePropSymbols(timestamp) {
     
-    cities.eachLayer(function(layer) {
+    mlbTeams.eachLayer(function(layer) {
         
         var props = layer.feature.properties;
         var radius = calcPropRadius(props[timestamp]);
@@ -166,7 +166,7 @@ function calcPropRadius(attributeValue) {
 
     };
 
-    legend.addTo(mapND);  
+    legend.addTo(mlbPayroll);  
 
 } // end createLegend(); */
 
@@ -201,7 +201,7 @@ function createSliderUI(timestamps) {
         });
     return slider;
     }
-    sliderControl.addTo(mapND);
+    sliderControl.addTo(mlbPayroll);
     createTimeLabel('2010');
 }
 
@@ -209,12 +209,12 @@ function createSliderUI(timestamps) {
 
 function createTimeLabel(startTimestamp) {
     var temporalLegend = L.control({position: 'bottomleft'});
-    temporalLegend.onAdd = function(mapND) {
+    temporalLegend.onAdd = function(mlbPayroll) {
         var output = L.DomUtil.create("output", "temporal-legend");
         $(output).text(startTimestamp);
         return output;
     }
-    temporalLegend.addTo(mapND);
+    temporalLegend.addTo(mlbPayroll);
 }
 
 
