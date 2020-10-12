@@ -12,8 +12,8 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r
 	maxZoom: 18,
 }).addTo(mlbPayroll); 
 
-var southWest = L.latLng(13.777645, -65.219521),
-    northEast = L.latLng(53.591362, -135.332475);
+var southWest = L.latLng(10.777645, -65.219521),
+    northEast = L.latLng(56.591362, -135.332475);
 var bounds = L.latLngBounds(southWest, northEast);
 
 mlbPayroll.setMaxBounds(bounds);
@@ -74,8 +74,8 @@ function createPropSymbols(timestamps, data) {
         
         pointToLayer: function(feature, LatLng) {
             return L.circleMarker(LatLng, {
-                fillColor: "blue",
-                color: 'blue',
+                fillColor: "navy",
+                color: 'navy',
                 weight: 1,
                 fillOpacity: 0.5
             }).on({

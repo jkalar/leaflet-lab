@@ -6,13 +6,17 @@
 
 #header {align: right;}
 
-table, th, td {
+table, th, {
   border: 0.2px solid black;
   text-align: center;
 }
 
+td { text-align: left;}
 
-body { background-color: white; }
+
+body { background-color: white; 
+       background-image: url(stadium.png);
+       opacity: 0.9;}
 
 h2 { color: black;}
 
@@ -20,16 +24,16 @@ h1 { color: black;
      font-style: italic;
      font-weight: bold;
      font-variant: small-caps;
-     font-size: 35px;}
+     font-size: 30px;}
 
 p { color: navy; 
     font-size: 20px;}
 
 
 #cont {overflow:hidden;}
-#main {float:left; background: white; width:20%; margin-left: 5px;}
-#sec{ float:right; background: white; width:80%; margin-right: 5px;}
-.c_box{ background: white;}
+#main {float:left; background: none; width:20%; margin-left: 5px;}
+#sec{ float:right; background: none; width:80%; margin-right: 5px;}
+.c_box{ background: none;}
 
 
 
@@ -61,8 +65,8 @@ p { color: navy;
 }
 .legendCircle {
     border-radius:50%; 
-    border: 1px solid blue; 
-    background: rgba(0, 0, 255, .4);
+    border: 1px solid navy; 
+    background: rgba(0, 0, 128, .4);
     display: inline-block;
 }
 .legendValue {
