@@ -149,7 +149,7 @@ function createLegend(min, max) {
         L.DomEvent.stopPropagation(e); 
     });  
 
-    $(legendContainer).append('<h2 id="legendTitle">Payrolls in USD ($)</h2>');
+    $(legendContainer).append('<h2 id="legendTitle">PAYROLL IN $USD</h2>');
 
     for (var i = 0; i <= classes.length-1; i++) {  
 
