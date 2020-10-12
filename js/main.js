@@ -227,4 +227,3 @@ function createTimeLabel(startTimestamp) {
     temporalLegend.addTo(mlbPayroll);
 }
 
-
