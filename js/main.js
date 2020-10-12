@@ -1,19 +1,19 @@
 /* Javascript for Proportional Symbol Map by Jeff Kalar, October 2020 */
 
 
-var mlbPayroll = L.map('mapid').setView([37.555555, -100.633491], 4);
+var mlbPayroll = L.map('mapid').setView([37.555555, -97.633491], 4);
 
 // Load basemap layer
 
 L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
 	subdomains: 'abcd',
-    minZoom: 4,
+    minZoom: 3,
 	maxZoom: 18,
 }).addTo(mlbPayroll); 
 
-var southWest = L.latLng(10.777645, -55.219521),
-    northEast = L.latLng(56.591362, -145.332475);
+var southWest = L.latLng(13.777645, -65.219521),
+    northEast = L.latLng(53.591362, -135.332475);
 var bounds = L.latLngBounds(southWest, northEast);
 
 mlbPayroll.setMaxBounds(bounds);
@@ -114,7 +114,7 @@ function updatePropSymbols(timestamp) {
 
 function calcPropRadius(attributeValue) {
     
-    var scaleFactor = 0.000009;
+    var scaleFactor = 0.0000093;
     var area = attributeValue * scaleFactor;
     
     return Math.sqrt(area/Math.PI);

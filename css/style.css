@@ -1,18 +1,18 @@
 /* Stylesheet by Jeff Kalar for Lab1 GEOG 575 */
 
-#mapid { height: 700px; }
-#mapid { margin-left: 25px;
-         margin-right: 25px;}
+#mapid { height: 1000px; }
+#mapid { margin-left: auto;
+         margin-right: 10px;}
 
 #header {align: right;}
 
 table, th, td {
-  border: 1px solid black;
+  border: 0.2px solid black;
   text-align: center;
 }
 
 
-body { background-color: cornsilk; }
+body { background-color: lightgray; }
 
 h2 { color: black;}
 
@@ -23,9 +23,9 @@ p { color: red;
 
 
 #cont {overflow:hidden;}
-#main {float:left; background: cornsilk; width:20%; margin-left: 25px;}
-#sec{ float:right; background: cornsilk; width:80%; margin-right: 25px;}
-.c_box{ background:cornsilk;}
+#main {float:left; background: lightgray; width:20%; margin-left: 5px;}
+#sec{ float:right; background: lightgray; width:80%; margin-right: 5px;}
+.c_box{ background: lightgray;}
 
 
 
