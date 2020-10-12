@@ -18,7 +18,7 @@ p { color: red;
 
 
 #cont {overflow:hidden;}
-#main {float:left; background: white; width:20%}
+#main {float:left; background: white; width:20%; margin-left: 25px;}
 #sec{ float:right; background: white; width:80%}
 .c_box{ background:white;}
 
