@@ -12,7 +12,7 @@ table, th, td {
 }
 
 
-body { background-color: white; }
+body { background-color: cornsilk; }
 
 h2 { color: black;}
 
@@ -23,9 +23,9 @@ p { color: red;
 
 
 #cont {overflow:hidden;}
-#main {float:left; background: white; width:20%; margin-left: 25px;}
-#sec{ float:right; background: white; width:80%; margin-right: 25px;}
-.c_box{ background:white;}
+#main {float:left; background: cornsilk; width:20%; margin-left: 25px;}
+#sec{ float:right; background: cornsilk; width:80%; margin-right: 25px;}
+.c_box{ background:cornsilk;}
 
 
 
