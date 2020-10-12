@@ -1,6 +1,8 @@
 /* Javascript for Proportional Symbol Map by Jeff Kalar, October 2020 */
 
 
+
+
 var mlbPayroll = L.map('mapid').setView([37.555555, -100.633491], 4);
 
 // Load basemap layer
@@ -227,3 +229,10 @@ function createTimeLabel(startTimestamp) {
     temporalLegend.addTo(mlbPayroll);
 }
 
+$(document).ready(function() {
+  $("#header-link1").change(function(){
+    if ($(this).val()!='') {
+      window.location.href=$(this).val();
+    }
+  });
+});
