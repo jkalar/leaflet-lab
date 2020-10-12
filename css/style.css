@@ -7,6 +7,8 @@ body { background-color: white; }
 
 h2 { color: black;}
 
+h5 { color: black;}
+
 p { color: red; 
     font-size: 20px;}
 
@@ -24,11 +26,11 @@ p { color: red;
     background: white;
     background: rgba(255,255,255,0.4);
     box-shadow: 0 0 5px rgba(0,0,0,0.6);
-    border-radius: 5px;
+    border-radius: 25px;
 }
 #legendTitle {
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     font-variant: small-caps;
 }
 .symbolsContainer {
@@ -39,7 +41,7 @@ p { color: red;
     border-radius:50%; 
     border: 1px solid red; 
     background: rgba(255, 0, 0, .4);
-    display: table;
+    display: inline-grid;
 }
 .legendValue {
     position: absolute;
