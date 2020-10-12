@@ -36,21 +36,19 @@
             <div id="main">
                 <div id="side">
                     <br><br><br>
-                    <form >
-                    <select name="forma" id="header-link1" >
-                 <option value="Select option">
-                    Select option
-                </option>
-                <option value="https://www.baseball-reference.com/teams/ARI/" target="_blank">
-                    Arizona Diamondbacks
-                </option>
-                <option value="http://www.surtymar.com/fr/reglementation-union-europeenne/">
-                      Réglementation 15
-                </option>
-
-                </select>
-
-                    </form>
+                    
+                    <select name="menu" id="menu" >
+                        <option value="https://www.baseball-reference.com/teams/ARI/">Arizona Diamondbacks</option>
+                        <option value="https://www.baseball-reference.com/teams/BOS/">Boston Red Sox</option>
+                    </select>
+                    
+                    <script type="text/javascript">
+                        var urlmenu = document.getElementById('menu');
+                        urlmenu.onchange = function() {
+                            window.open( this.option[ this.selectedIndex ].value );
+                        };
+                        
+                    </script>
                 
                 </div>
             </div>
