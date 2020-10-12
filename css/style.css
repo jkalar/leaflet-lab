@@ -6,6 +6,11 @@
 
 #header {align: right;}
 
+table, th, td {
+  border: 1px solid black;
+  text-align: center;
+}
+
 
 body { background-color: white; }
 
@@ -19,7 +24,7 @@ p { color: red;
 
 #cont {overflow:hidden;}
 #main {float:left; background: white; width:20%; margin-left: 25px;}
-#sec{ float:right; background: white; width:80%}
+#sec{ float:right; background: white; width:80%; margin-right: 25px;}
 .c_box{ background:white;}
 
 
