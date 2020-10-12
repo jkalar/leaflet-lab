@@ -38,7 +38,7 @@ p { color: red; }
     border-radius:50%; 
     border: 1px solid red; 
     background: rgba(255, 0, 0, .4);
-    display: table-caption;
+    display: table;
 }
 .legendValue {
     position: absolute;
