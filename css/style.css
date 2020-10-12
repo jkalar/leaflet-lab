@@ -6,7 +6,7 @@
 
 body { background-color: skyblue; }
 
-h2 { color: red;}
+h2 { color: black;}
 
 /* .range-slider { 
     width: 200%;
@@ -19,8 +19,8 @@ h2 { color: red;}
     font-style: italic;
     font-weight: bold;
     background: white;
-    background: rgba(255,255,255,0.8);
-    box-shadow: 0 0 25px rgba(0,0,0,0.2);
+    background: rgba(255,255,255,0.4);
+    box-shadow: 0 0 25px rgba(0,0,0,0.6);
     border-radius: 5px;
 }
 #legendTitle {
@@ -40,6 +40,6 @@ h2 { color: red;}
 }
 .legendValue {
     position: absolute;
-    color: red;
+    color: black;
     right: 15px;
 }
