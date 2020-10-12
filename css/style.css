@@ -40,5 +40,6 @@ h2 { color: red;}
 }
 .legendValue {
     position: absolute;
+    color: red;
     right: 15px;
 }
