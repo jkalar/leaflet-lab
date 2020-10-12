@@ -1,7 +1,10 @@
 /* Stylesheet by Jeff Kalar for Lab1 GEOG 575 */
 
 #mapid { height: 700px; }
-#mapid { margin-left: 50px; } 
+#mapid { margin: auto; }
+
+#header {align: right;}
+
 
 body { background-color: white; }
 
@@ -11,6 +14,14 @@ h1 { color: black;}
 
 p { color: red; 
     font-size: 20px;}
+
+
+#cont {overflow:hidden;}
+#main {float:left; background: white; width:20%}
+#sec{ float:right; background: white; width:80%}
+.c_box{ background:white;}
+
+
 
 
 /* .range-slider { 
