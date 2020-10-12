@@ -103,7 +103,7 @@ function updatePropSymbols(timestamp) {
         var props = layer.feature.properties;
         var radius = calcPropRadius(props[timestamp]);
         
-        var popupContent = '<p><b>' + 'Team:' + '</b>' + ' ' + props.name + '<br>' + '<b>Payroll in ' + timestamp + ':</b> ' + '$' + String(props[timestamp]) ;
+        var popupContent = '<p><b>' + 'Team:' + '</b></p>' + props.name + '<p><b>Payroll in ' + timestamp + ':</b></p> ' + '$' +  String(props[timestamp]) ;
         
         layer.setRadius(radius);
         layer.bindPopup(popupContent, { offset: new L.Point(0,-radius) });
