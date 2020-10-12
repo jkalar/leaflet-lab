@@ -228,7 +228,7 @@ function createTimeLabel(startTimestamp) {
 }
 
 /*$(document).ready(function() {
-  $("#header-link1").change(function(){
+  $("menu").change(function(){
     if ($(this).val()!='') {
       window.location.href=$(this).val();
     }
