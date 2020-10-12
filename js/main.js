@@ -74,8 +74,8 @@ function createPropSymbols(timestamps, data) {
         
         pointToLayer: function(feature, LatLng) {
             return L.circleMarker(LatLng, {
-                fillColor: "red",
-                color: 'red',
+                fillColor: "blue",
+                color: 'blue',
                 weight: 1,
                 fillOpacity: 0.5
             }).on({
