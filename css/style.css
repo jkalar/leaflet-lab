@@ -20,7 +20,7 @@ h2 { color: black;}
     font-weight: bold;
     background: white;
     background: rgba(255,255,255,0.4);
-    box-shadow: 0 0 25px rgba(0,0,0,0.6);
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
     border-radius: 5px;
 }
 #legendTitle {
@@ -36,7 +36,7 @@ h2 { color: black;}
     border-radius:50%; 
     border: 1px solid red; 
     background: rgba(255, 0, 0, .4);
-    display: table-caption;
+    display: inline-block;
 }
 .legendValue {
     position: absolute;
