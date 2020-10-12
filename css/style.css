@@ -1,7 +1,8 @@
 /* Stylesheet by Jeff Kalar for Lab1 GEOG 575 */
 
 #mapid { height: 700px; }
-#mapid { margin: auto; }
+#mapid { margin-left: 25px;
+         margin-right: 25px;}
 
 #header {align: right;}
 
