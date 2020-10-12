@@ -228,4 +228,3 @@ function createTimeLabel(startTimestamp) {
 }
 
 
-
