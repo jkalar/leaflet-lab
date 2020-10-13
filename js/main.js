@@ -49,7 +49,7 @@ var overlay = {};
 // layer control to toggle between basemaps
 
 L.control.layers(basemaps, overlay, {
-    collapsed: false
+    collapsed: true
 }).addTo(mlbPayroll);
 
 // search field
