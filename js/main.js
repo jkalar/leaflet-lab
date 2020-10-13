@@ -38,11 +38,15 @@ $.getJSON("data/mlbPayroll.geojson")
     createLegend(info.min, info.max);
 });
 
+// declare basemap variables
+
 var basemaps = { 
     "White": whiteMap,
     "Color": blueMap};
 
 var overlay = {};
+
+// layer control to toggle between basemaps
 
 L.control.layers(basemaps, overlay, {
     collapsed: false
