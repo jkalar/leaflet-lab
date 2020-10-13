@@ -11,11 +11,11 @@ table, th, {
   text-align: center;
 }
 
-button {width: 180px;
+button {width: 185px;
         color: red;
         font-weight: bold;
-        font-size: 12px;
-        height: 26px;}
+        font-size: 13px;
+        height: 27px;}
 
 td { text-align: left;}
 
