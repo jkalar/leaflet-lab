@@ -13,8 +13,8 @@ var noColor = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/
 	ext: 'png'
 }).addTo(mlbPayroll); 
 
-var yesColor = L.tileLayer ('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}{r}.png', {
-	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+var yesColor = L.tileLayer ('https://tiles.wmflabs.org/hikebike/{z}/{x}/{y}.png', {
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     minZoom: 4,
     maxZoom: 18
 }).addTo(mlbPayroll);
