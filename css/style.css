@@ -104,7 +104,7 @@ p { color: navy;
 /* Tooltip text */
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 205px;
+  width: 202px;
   background-color: red;
   color: #fff;
   text-align: center;
