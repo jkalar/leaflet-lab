@@ -18,13 +18,14 @@ body { background-color: white;}
        /*background-image: url(baseball.png);
        opacity: 0.9;}*/
 
-h2 { color: black;}
+h2 { color: navy;
+     font-weight: bold;}
 
-h1 { color: red;
+h1 { color: navy;
      font-style: italic;
      font-weight: bold;
      font-variant: small-caps;
-     font-size: 30px;}
+     font-size: 50px;}
 
 p1{ color: navy;
     font-size: 15px;
@@ -35,8 +36,8 @@ p { color: navy;
 
 
 #cont {overflow:hidden; margin-top: auto;}
-#main {float:left; background: white; width:20%; margin-left: none;}
-#sec{ float:right; background: white; width:80%; margin-right: none;}
+#main {float:left; background: white; width:20%; margin-left: 5px;}
+#sec{ float:right; background: white; width:80%; margin-right: 5px;}
 .c_box{ background: white; text-align: justify; margin-top: 20px;}
 
 
