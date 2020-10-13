@@ -21,14 +21,14 @@ body { background-color: white;}
 h2 { color: navy;
      font-weight: bold;}
 
-h1 { color: navy;
+h1 { color: red;
      font-style: italic;
      font-weight: bold;
      font-variant: small-caps;
-     font-size: 50px;}
+     font-size: 40px;}
 
 p1{ color: navy;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;}
 
 p { color: navy; 
@@ -38,7 +38,7 @@ p { color: navy;
 #cont {overflow:hidden; margin-top: auto;}
 #main {float:left; background: white; width:20%; margin-left: 5px;}
 #sec{ float:right; background: white; width:80%; margin-right: 5px;}
-.c_box{ background: white; text-align: justify; margin-top: 20px;}
+.c_box{ background: white; text-align: center; margin-top: 20px;}
 
 
 
