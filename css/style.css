@@ -11,7 +11,7 @@ table, th, {
   text-align: center;
 }
 
-button {width: 160px;
+button {width: 180px;
         color: red;
         font-weight: bold;
         font-size: 13px;
@@ -47,7 +47,7 @@ p { color: navy;
 
 
 #cont {overflow:hidden; margin-top: inherit;}
-#main {float:left; background: white; width:12%; margin-left: 9px;}
+#main {float:left; background: white; width:12%; margin-left: px;}
 #sec{ float:right; background: white; width:88%; margin-right: 1px;}
 .c_box{ background: white; text-align: center; margin-left: 310px;}
 
