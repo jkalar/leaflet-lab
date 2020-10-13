@@ -14,7 +14,7 @@ table, th, {
 td { text-align: left;}
 
 
-body { background-color: white;} 
+body { background-color: rgba(192,192,192);} 
        /*background-image: url(baseball.png);
        opacity: 0.9;}*/
 
@@ -31,9 +31,9 @@ p { color: navy;
 
 
 #cont {overflow:hidden;}
-#main {float:left; background: white; width:20%; margin-left: 5px;}
-#sec{ float:right; background: white; width:80%; margin-right: 5px;}
-.c_box{ background: white;}
+#main {float:left; background: lightgrey; width:20%; margin-left: 5px;}
+#sec{ float:right; background: lightgrey; width:80%; margin-right: 5px;}
+.c_box{ background: lightgrey;}
 
 
 
