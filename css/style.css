@@ -15,8 +15,7 @@ td { text-align: left;}
 
 
 body { background-color: white; 
-       background-image: url(baseball.png);
-       opacity: 0.9;}
+       background-image: url(baseball.png);}
 
 h2 { color: black;}
 
@@ -31,9 +30,9 @@ p { color: navy;
 
 
 #cont {overflow:hidden;}
-#main {float:left; background: none; width:20%; margin-left: 5px;}
-#sec{ float:right; background: none; width:80%; margin-right: 5px;}
-.c_box{ background: none;}
+#main {float:left; background: white; width:20%; margin-left: 5px;}
+#sec{ float:right; background: white; width:80%; margin-right: 5px;}
+.c_box{ background: white;}
 
 
 
