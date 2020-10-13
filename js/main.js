@@ -13,8 +13,9 @@ var blueMap = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/
 	ext: 'png'
 }).addTo(mlbPayroll); 
 
-var whiteMap = L.tileLayer ('http://tile.mtbmap.cz/mtbmap_tiles/{z}/{x}/{y}.png', {
-	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &amp; USGS',
+var whiteMap = L.tileLayer ('https://{s}.tile.thunderforest.com/transport-dark/{z}/{x}/{y}.png?apikey={apikey}', {
+	attribution: '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+	apikey: '<your apikey>',
     minZoom: 4,
     maxZoom: 18
 }).addTo(mlbPayroll);
