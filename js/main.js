@@ -41,8 +41,8 @@ $.getJSON("data/mlbPayroll.geojson")
 // declare basemap variables
 
 var basemaps = { 
-    "No Color": noColor,
-    "Color": yesColor};
+    "Color": yesColor,
+    "No Color": noColor};
 
 var overlay = {};
 
