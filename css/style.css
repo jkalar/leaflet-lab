@@ -45,7 +45,7 @@ p { color: navy;
 
 .legend, .temporal-legend {
     padding: 15px 15px;
-    font: 16px/16px Arial, Helvetica, sans-serif;
+    font: 14px/20px Arial, Helvetica, sans-serif;
     font-style: italic;
     font-weight: bold;
     background: white;
@@ -58,16 +58,19 @@ p { color: navy;
     margin-bottom: 10px;
     margin-top: 1px;
     font-variant: small-caps;
+    background: white;
 }
 .symbolsContainer {
     float: left;
     margin-left: 55px;
+    background-color: white;
 }
 .legendCircle {
     border-radius:50%; 
     border: 1px solid navy; 
     background: rgba(0, 0, 128, .4);
     display: inline-block;
+    opacity: 0.7;
 }
 .legendValue {
     position: absolute;

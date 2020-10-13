@@ -34,23 +34,21 @@ $.getJSON("data/mlbPayroll.geojson")
 
 // search field
 
-/*
-var featuresLayer = new.L.geoJson(data, {
-    style: function(feature)
-});
-
-map.addLayer(featuresLayer);
-
-var searchControl = new.L.Control.Search({
-    layer: featuresLayer,
-    team: 'name',
-    marker: false,
-    moveToLocation: function(latlng, title, mlbPayroll){
-        var zoom: mlbPayroll.getBoundsZoom(latlng.layer.getBounds());
-        mlbPayroll.setView(latlng, zoom)
-    };
-});
-*/
+//var featuresLayer = new.L.geoJson(data, {
+//    style: function(feature)
+//});
+//
+//map.addLayer(featuresLayer);
+//
+//var searchControl = new.L.Control.Search({
+//    layer: featuresLayer,
+//    team: 'name',
+//    marker: false,
+//    moveToLocation: function(latlng, title, map){
+//        var zoom: mlbPayroll.getBoundsZoom(latlng.layer.getBounds());
+//        map.setView(latlng, zoom)
+//    };
+//});
 
 
 
