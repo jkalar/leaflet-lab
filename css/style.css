@@ -103,8 +103,8 @@ p { color: navy;
 /* Tooltip text */
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 120px;
-  background-color: black;
+  width: 150px;
+  background-color: red;
   color: #fff;
   text-align: center;
   padding: 5px 0;
