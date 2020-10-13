@@ -47,8 +47,8 @@ p { color: navy;
 
 
 #cont {overflow:hidden; margin-top: inherit;}
-#main {float:left; background: white; width:11%; margin-left: none;}
-#sec{ float:right; background: white; width:89%; margin-right: 1px;}
+#main {float:left; background: white; width:12%; margin-left: none;}
+#sec{ float:right; background: white; width:88%; margin-right: 1px;}
 .c_box{ background: white; text-align: center; margin-left: 310px;}
 
 
