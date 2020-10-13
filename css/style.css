@@ -47,6 +47,11 @@ p2{ color: navy;
     font-weight: bold;
     text-align: center;}
 
+p3{ color: navy;
+    font-size: 14px;
+    font-weight: light;
+    text-align: center;}
+
 p { color: navy; 
     font-size: 25px;}
 
