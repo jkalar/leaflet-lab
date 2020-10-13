@@ -20,32 +20,35 @@ body { background-color: white;}
 
 h2 { color: black;}
 
-h1 { color: black;
+h1 { color: red;
      font-style: italic;
      font-weight: bold;
      font-variant: small-caps;
      font-size: 30px;}
 
+p1{ color: navy;
+    font-size: 15px;
+    font-weight: bold;}
+
 p { color: navy; 
-    font-size: 20px;}
+    font-size: 25px;}
 
 
 #cont {overflow:hidden; margin-top: auto;}
 #main {float:left; background: white; width:20%; margin-left: 5px;}
 #sec{ float:right; background: white; width:80%; margin-right: 5px;}
-.c_box{ background: white; text-align: center;}
+.c_box{ background: white; text-align: justify; margin-top: 20px;}
 
 
 
-
-/* .range-slider { 
-    width: 200%;
-} */
+ .range-slider { 
+    width: 100%;
+} 
 
 
 .legend, .temporal-legend {
     padding: 15px 15px;
-    font: 14px/20px Arial, Helvetica, sans-serif;
+    font: 16px/20px Arial, Helvetica, sans-serif;
     font-style: italic;
     font-weight: bold;
     background: white;
@@ -58,12 +61,10 @@ p { color: navy;
     margin-bottom: 10px;
     margin-top: 1px;
     font-variant: small-caps;
-    background: white;
 }
 .symbolsContainer {
     float: left;
     margin-left: 55px;
-    background-color: white;
 }
 .legendCircle {
     border-radius:50%; 

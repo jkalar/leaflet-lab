@@ -13,8 +13,8 @@ L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}
 	ext: 'png'
 }).addTo(mlbPayroll); 
 
-var southWest = L.latLng(10.777645, -65.219521),
-    northEast = L.latLng(56.591362, -135.332475);
+var southWest = L.latLng(10.777645, -55.219521),
+    northEast = L.latLng(59.591362, -145.332475);
 var bounds = L.latLngBounds(southWest, northEast);
 
 mlbPayroll.setMaxBounds(bounds);
