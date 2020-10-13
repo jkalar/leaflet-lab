@@ -5,13 +5,19 @@ var mlbPayroll = L.map('mapid').setView([37.555555, -97.633491], 5);
 
 // Load basemap layer
 
-L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.{ext}', {
+var whiteMap = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.{ext}', {
 	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 	subdomains: 'abcd',
 	minZoom: 4,
 	maxZoom: 18,
 	ext: 'png'
 }).addTo(mlbPayroll); 
+
+var blueMap = L.tileLayer ('http://tile.mtbmap.cz/mtbmap_tiles/{z}/{x}/{y}.png', {
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &amp; USGS',
+    minZoom: 4,
+    maxZoom: 18
+}).addTo(mlbPayroll);
 
 var southWest = L.latLng(10.777645, -55.219521),
     northEast = L.latLng(59.591362, -145.332475);
@@ -31,6 +37,16 @@ $.getJSON("data/mlbPayroll.geojson")
     createSliderUI(info.timestamps);
     createLegend(info.min, info.max);
 });
+
+var basemaps = { 
+    "White": whiteMap,
+    "Color": blueMap};
+
+var overlay = {};
+
+L.control.layers(basemaps, overlay, {
+    collapsed: false
+}).addTo(mlbPayroll);
 
 // search field
 
