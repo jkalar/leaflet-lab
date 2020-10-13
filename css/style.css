@@ -35,8 +35,8 @@ p { color: navy;
 
 
 #cont {overflow:hidden; margin-top: auto;}
-#main {float:left; background: white; width:10%; margin-left: none;}
-#sec{ float:right; background: white; width:90%; margin-right: none;}
+#main {float:left; background: white; width:20%; margin-left: none;}
+#sec{ float:right; background: white; width:80%; margin-right: none;}
 .c_box{ background: white; text-align: justify; margin-top: 20px;}
 
 
