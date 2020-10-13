@@ -5,7 +5,7 @@ var mlbPayroll = L.map('mapid').setView([37.555555, -97.633491], 5);
 
 // Load basemap layer
 
-var blueMap = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.{ext}', {
+var noColor = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.{ext}', {
 	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 	subdomains: 'abcd',
 	minZoom: 4,
@@ -13,7 +13,7 @@ var blueMap = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/
 	ext: 'png'
 }).addTo(mlbPayroll); 
 
-var whiteMap = L.tileLayer ('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}{r}.png', {
+var yesColor = L.tileLayer ('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}{r}.png', {
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
     minZoom: 4,
     maxZoom: 18
@@ -41,8 +41,8 @@ $.getJSON("data/mlbPayroll.geojson")
 // declare basemap variables
 
 var basemaps = { 
-    "White": whiteMap,
-    "Color": blueMap};
+    "No Color": noColor,
+    "Color": yesColor};
 
 var overlay = {};
 
