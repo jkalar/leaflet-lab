@@ -1,8 +1,8 @@
 /* Stylesheet by Jeff Kalar for Lab1 GEOG 575 */
 
 #mapid { height: 1000px; }
-#mapid { margin-left: 25px;
-         margin-right: 25px;}
+#mapid { margin-left: 35px;
+         margin-right: 35px;}
 
 #header {align: center;}
 
@@ -48,7 +48,7 @@ p { color: navy;
 
 .legend, .temporal-legend {
     padding: 15px 15px;
-    font: 16px/20px Arial, Helvetica, sans-serif;
+    font: 22px/29px Arial, Helvetica, sans-serif;
     font-style: italic;
     font-weight: bold;
     background: white;
