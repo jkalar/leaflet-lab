@@ -1,10 +1,10 @@
 /* Stylesheet by Jeff Kalar for Lab1 GEOG 575 */
 
 #mapid { height: 1000px; }
-#mapid { margin-left: auto;
-         margin-right: 10px;}
+#mapid { margin-left: 25px;
+         margin-right: 25px;}
 
-#header {align: right;}
+#header {align: center;}
 
 table, th, {
   border: 0.2px solid black;
@@ -14,7 +14,7 @@ table, th, {
 td { text-align: left;}
 
 
-body { background-color: rgba(192,192,192);} 
+body { background-color: white;} 
        /*background-image: url(baseball.png);
        opacity: 0.9;}*/
 
@@ -30,10 +30,10 @@ p { color: navy;
     font-size: 20px;}
 
 
-#cont {overflow:hidden;}
-#main {float:left; background: lightgrey; width:20%; margin-left: 5px;}
-#sec{ float:right; background: lightgrey; width:80%; margin-right: 5px;}
-.c_box{ background: lightgrey;}
+#cont {overflow:hidden; margin-top: auto;}
+#main {float:left; background: white; width:20%; margin-left: 5px;}
+#sec{ float:right; background: white; width:80%; margin-right: 5px;}
+.c_box{ background: white;}
 
 
 
