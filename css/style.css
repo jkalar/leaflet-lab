@@ -14,8 +14,9 @@ table, th, {
 td { text-align: left;}
 
 
-body { background-color: white; 
-       background-image: url(baseball.png);}
+body { background-color: white;} 
+       /*background-image: url(baseball.png);
+       opacity: 0.9;}*/
 
 h2 { color: black;}
 
