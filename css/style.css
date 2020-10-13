@@ -109,6 +109,7 @@ p { color: navy;
   text-align: center;
   padding: 5px 0;
   border-radius: 6px;
+  display: inline-block;
  
   /* Position the tooltip text - see examples below! */
   position: absolute;
