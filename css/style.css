@@ -14,7 +14,8 @@ table, th, {
 button {width: 142px;
         color: red;
         font-weight: bold;
-        font-size: 11px;}
+        font-size: 11px;
+        height: 22px;}
 
 td { text-align: left;}
 
@@ -23,7 +24,7 @@ body { background-color: white;}
        /*background-image: url(baseball.png);
        opacity: 0.9;}*/
 
-h2 { color: navy;
+h2 { color: black;
      font-weight: bold;}
 
 h1 { color: red;
