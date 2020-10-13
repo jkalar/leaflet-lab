@@ -32,6 +32,28 @@ $.getJSON("data/mlbPayroll.geojson")
     createLegend(info.min, info.max);
 });
 
+// search field
+
+/*
+var featuresLayer = new.L.geoJson(data, {
+    style: function(feature)
+});
+
+map.addLayer(featuresLayer);
+
+var searchControl = new.L.Control.Search({
+    layer: featuresLayer,
+    team: 'name',
+    marker: false,
+    moveToLocation: function(latlng, title, mlbPayroll){
+        var zoom: mlbPayroll.getBoundsZoom(latlng.layer.getBounds());
+        mlbPayroll.setView(latlng, zoom)
+    };
+});
+*/
+
+
+
 // Function to process data which acquires the year columns and min/max population values
 
 function processData(data) {
@@ -115,7 +137,7 @@ function updatePropSymbols(timestamp) {
 
 function calcPropRadius(attributeValue) {
     
-    var scaleFactor = 0.0000093;
+    var scaleFactor = 0.0000193;
     var area = attributeValue * scaleFactor;
     
     return Math.sqrt(area/Math.PI);
@@ -227,6 +249,8 @@ function createTimeLabel(startTimestamp) {
     }
     temporalLegend.addTo(mlbPayroll);
 }
+
+
 
 /*$(document).ready(function() {
   $("menu").change(function(){
