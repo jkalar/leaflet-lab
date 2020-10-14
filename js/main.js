@@ -1,7 +1,7 @@
 /* Javascript for Proportional Symbol Map by Jeff Kalar, October 2020 */
 
 
-var mlbPayroll = L.map('mapid').setView([37.555555, -97.633491], 5);
+var mlbPayroll = L.map('mapid').setView([37.555555, -97.633491], 4);
 
 // Load basemap layer
 
