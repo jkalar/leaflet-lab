@@ -59,8 +59,8 @@ p { color: navy;
     font-size: 25px;}
 
 #cont {overflow:hidden; margin-top: inherit;}
-#main {float:left; background: white; width:17%; margin-left: auto;}
-#sec{ float:right; background: white; width:83%; margin-right: auto;}
+#main {float:left; background: white; width:20%; margin-left: auto;}
+#sec{ float:right; background: white; width:80%; margin-right: auto;}
 .c_box{ background: white; text-align: center;}
 
 
