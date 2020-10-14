@@ -58,8 +58,8 @@ p { color: navy;
     font-size: 25px;}
 
 #cont {overflow:hidden; margin-top: inherit;}
-#main {float:left; background: white; width:18%; margin-left: 1px;}
-#sec{ float:right; background: white; width:82%; margin-right: 1px;}
+#main {float:left; background: white; width:17%; margin-left: 1px;}
+#sec{ float:right; background: white; width:83%; margin-right: 1px;}
 .c_box{ background: white; text-align: center; margin-left: 300px;}
 
 
@@ -114,7 +114,7 @@ p { color: navy;
 /* Tooltip text */
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 202px;
+  width: 220px;
   background-color: red;
   color: #fff;
   text-align: center;
