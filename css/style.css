@@ -11,12 +11,13 @@ table, th, {
   text-align: center;
 }
 
-button {width: 195px;
+button {width: relative;
         color: red;
         font-weight: bold;
         font-size: 13px;
         height: 27px;
         text-align: center;}
+
 
 td { text-align: left;}
 
@@ -27,7 +28,7 @@ body { background-color: white;}
 
 h4 { color: navy;
      font-weight: lighter;
-     font-size: 25px;
+     font-size: 16.5px;
      font-family: serif;}
 
 h3 { color: black;
@@ -37,7 +38,7 @@ h1 { color: red;
      font-style: italic;
      font-weight: bold;
      font-variant: small-caps;
-     font-size: 34px;}
+     font-size: 28px;}
 
 p1{ color: navy;
     font-size: 20px;
