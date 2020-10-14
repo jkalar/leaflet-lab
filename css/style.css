@@ -114,12 +114,12 @@ p { color: navy;
 /* Tooltip text */
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 220px;
+  width: 240px;
   background-color: red;
   color: #fff;
   text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
+  padding: 10px 0;
+  border-radius: 12px;
   display: inline-block;
  
   /* Position the tooltip text - see examples below! */
