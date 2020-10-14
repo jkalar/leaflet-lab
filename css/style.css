@@ -10,7 +10,7 @@ table, th, {
   text-align: center;
 }
 
-button {width: 195px;
+button {width: 190px;
         color: red;
         font-weight: bold;
         font-size: 13px;
@@ -47,8 +47,7 @@ p1{ color: navy;
 
 p2{ color: navy;
     font-size: 17px;
-    font-weight: bold;
-    text-align: center;}
+    font-weight: bold;}
 
 p3{ color: navy;
     font-size: 14px;
