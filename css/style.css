@@ -11,25 +11,27 @@ table, th, {
   text-align: center;
 }
 
-button {width: relative;
+button {width: 195px;
         color: red;
         font-weight: bold;
         font-size: 13px;
         height: 27px;
         text-align: center;}
 
-
-td { text-align: left;}
-
+a { text-decoration: none;
+    color: red;}
 
 body { background-color: white;} 
        /*background-image: url(baseball.png);
        opacity: 0.9;}*/
 
 h4 { color: navy;
-     font-weight: lighter;
-     font-size: 16.5px;
-     font-family: serif;}
+     font-weight: bold;
+     font-size: 19px;
+     font-family: serif;
+    text-align: center;
+    margin-left: 27px;
+    margin-right: 10px;}
 
 h3 { color: black;
      font-weight: bold;}
@@ -38,7 +40,7 @@ h1 { color: red;
      font-style: italic;
      font-weight: bold;
      font-variant: small-caps;
-     font-size: 28px;}
+     font-size: 34px;}
 
 p1{ color: navy;
     font-size: 20px;
