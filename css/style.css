@@ -2,7 +2,7 @@
 
 #mapid { height: 1000px; }
 #mapid { margin-left: 35px;
-         margin-right: 5px;}
+         margin-right: 25px;}
 
 
 table, th, {
@@ -28,7 +28,7 @@ h4 { color: navy;
      font-weight: bold;
      font-size: 20px;
      font-family: serif;
-    text-align: center;
+    text-align: left;
     margin-left: 27px;
     margin-right: 10px;}
 
@@ -46,7 +46,7 @@ p1{ color: navy;
     font-weight: bold;}
 
 p2{ color: navy;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: bold;}
 
 p3{ color: navy;
