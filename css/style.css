@@ -107,7 +107,7 @@ p { color: navy;
 /* Tooltip container */
 .tooltip {
   position: relative;
-  display: inline-block;
+  display: inline-table;
   border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
 }
 
