@@ -14,6 +14,7 @@ var noColor = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/
 }).addTo(mlbPayroll); 
 
 var yesColor = L.tileLayer ('https://tiles.wmflabs.org/hikebike/{z}/{x}/{y}.png', {
+	maxZoom: 19,
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     minZoom: 4,
     maxZoom: 18
