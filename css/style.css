@@ -123,7 +123,7 @@ p { color: navy;
   display: inline-block;
  
   /* Position the tooltip text - see examples below! */
-  position: absolute;
+  position: fixed;
   z-index: 1;
 }
 
