@@ -121,6 +121,7 @@ p { color: navy;
   padding: 10px 0;
   border-radius: 12px;
   display: inline-block;
+  font-size: 15px;
  
   /* Position the tooltip text - see examples below! */
   position: fixed;
